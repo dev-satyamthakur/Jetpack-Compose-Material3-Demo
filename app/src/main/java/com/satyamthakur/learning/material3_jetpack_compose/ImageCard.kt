@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Share
@@ -80,10 +81,12 @@ fun ImageCard(
                     leadingIcon = {
                         Icon(
                             imageVector = Icons.Outlined.FavoriteBorder,
-                            contentDescription = null
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onPrimaryContainer
                         )
                     }
                 )
+                Spacer(modifier = Modifier.width(8.dp))
                 AssistChip(
                     onClick = {},
                     label = {
@@ -95,7 +98,8 @@ fun ImageCard(
                     leadingIcon = {
                         Icon(
                             imageVector = Icons.Outlined.Share,
-                            contentDescription = null
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onPrimaryContainer
                         )
                     }
                 )
